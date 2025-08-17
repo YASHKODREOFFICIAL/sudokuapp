@@ -16,7 +16,6 @@ A feature-rich Sudoku game application built with Flutter that offers daily chal
 git clone https://github.com/your-username/sudoku-flutter.git
 cd sudoku-flutter
 flutter pub get
-```bash
 
 Puzzle Data Format
 Create assets/puzzles.json with:
