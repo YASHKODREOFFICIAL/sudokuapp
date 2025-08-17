@@ -1,16 +1,83 @@
-# my_app
+# Sudoku Game App - Flutter Implementation
 
-A new Flutter project.
+## Overview
+A feature-rich Sudoku game application built with Flutter that offers daily challenges, statistics tracking, and an intuitive gameplay experience.
 
-## Getting Started
+## Features
+- 🎮 **Daily Challenges**: New puzzle every day
+- 🧩 **Random Puzzles**: Unlimited gameplay
+- 📊 **Statistics Tracking**: Wins and failures
+- 🎨 **Dark Theme**: Easy on eyes
+- 🚦 **Smart Validation**: Real-time error checking
+- ⏱ **Attempt Counter**: 10-attempt limit per puzzle
 
-This project is a starting point for a Flutter application.
+## Installation
+```bash
+git clone https://github.com/your-username/sudoku-flutter.git
+cd sudoku-flutter
+flutter pub get
 
-A few resources to get you started if this is your first Flutter project:
+Puzzle Data Format
+Create assets/puzzles.json with:
 
-- [Lab: Write your first Flutter app](https://docs.flutter.dev/get-started/codelab)
-- [Cookbook: Useful Flutter samples](https://docs.flutter.dev/cookbook)
+[
+  {
+    "default": [
+      [null,4,null,null,null,null,null,1,7],
+      [null,2,null,4,5,null,null,null,null],
+      [7,8,null,1,3,6,null,4,5],
+      [null,1,4,3,6,5,null,null,8],
+      [null,5,null,2,null,8,null,6,4],
+      [null,null,8,7,null,null,5,null,null],
+      [null,3,1,5,null,2,null,null,6],
+      [8,null,2,null,7,3,4,null,null],
+      [9,7,5,null,null,null,null,3,null]
+    ],
+    "solution": [
+      [5,4,6,8,2,9,3,1,7],
+      [1,2,3,4,5,7,6,8,9],
+      [7,8,9,1,3,6,2,4,5],
+      [2,1,4,3,6,5,7,9,8],
+      [3,5,7,2,9,8,1,6,4],
+      [6,9,8,7,1,4,5,2,3],
+      [4,3,1,5,8,2,9,7,6],
+      [8,6,2,9,7,3,4,5,1],
+      [9,7,5,6,4,1,8,3,2]
+    ]
+  }
+]
 
-For help getting started with Flutter development, view the
-[online documentation](https://docs.flutter.dev/), which offers tutorials,
-samples, guidance on mobile development, and a full API reference.
+
+Game Mechanics
+Controls:
+
+Tap cells to select
+Use number pad to input values
+Erase button removes entries
+Reset restarts puzzle
+New Game loads random puzzle
+
+Win Conditions:
+
+Complete puzzle correctly
+Recorded in statistics
+
+Failure Conditions:
+
+10 incorrect attempts
+Puzzle marked as failed
+
+
+Technical Implementation
+
+Flutter Framework: UI implementation
+
+JSON Storage: Puzzle data and statistics
+State Management: setState for UI updates
+Path Provider: Local data persistence
+
+Screens
+Home: Game entry point
+Daily Game: Calendar-based selection
+Puzzle: Main gameplay  
+Statistics: Performance tracking
